@@ -11,4 +11,13 @@ export const Api = {
       body: JSON.stringify(body)
     })
   },
+  fetchPut: (body, id) => {
+    return fetch(Api.url + '/update/' + id, {
+      method: 'PUT',
+      headers: new Headers({
+        "Content-type": "application/json",
+      }),
+      body: JSON.stringify(body),
+    })
+  }
 }
